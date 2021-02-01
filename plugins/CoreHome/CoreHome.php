@@ -131,6 +131,7 @@ class CoreHome extends \Piwik\Plugin
         $stylesheets[] = "plugins/CoreHome/stylesheets/notification.less";
         $stylesheets[] = "plugins/CoreHome/stylesheets/zen-mode.less";
         $stylesheets[] = "plugins/CoreHome/stylesheets/layout.less";
+        $stylesheets[] = "plugins/CoreHome/stylesheets/referBanner.less";
         $stylesheets[] = "plugins/CoreHome/angularjs/enrichedheadline/enrichedheadline.directive.less";
         $stylesheets[] = "plugins/CoreHome/angularjs/notification/notification.directive.less";
         $stylesheets[] = "plugins/CoreHome/angularjs/quick-access/quick-access.directive.less";
@@ -183,6 +184,7 @@ class CoreHome extends \Piwik\Plugin
         $jsFiles[] = "plugins/CoreHome/javascripts/numberFormatter.js";
         $jsFiles[] = "plugins/CoreHome/javascripts/zen-mode.js";
         $jsFiles[] = "plugins/CoreHome/javascripts/noreferrer.js";
+        $jsFiles[] = "plugins/CoreHome/javascripts/referBanner.js";
 
         $jsFiles[] = "plugins/CoreHome/angularjs/piwikApp.config.js";
 

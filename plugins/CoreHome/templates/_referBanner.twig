@@ -1,0 +1,47 @@
+<div class="referBanner hide" id="referBanner">
+    <div class="flex items-center justify-center h-full" id="default-text">
+        <div>
+            Don't let your friend's data end up in the wrong hands!
+            <span class="hide-on-med-and-down">Refer them to Matomo Analytics now to take back control!</span>
+        </div>
+
+        {% set mailtoSubject = 'Why I no longer use Google Analytics' %}
+        {% set mailtoBody =  'Did you know Google uses data for "own purposes"? That means Google owns your data and is using it to monetise their advertising platforms.%0D%0AThis is why I don’t use Google Analytics for analysing the performance of my website.%0D%0AInstead I choose Matomo, an ethical alternative to Google Analytics that gives me 100% data ownership and protects the data of my website visitors.%0D%0AI’m sharing this message in the hope that you too will take back the power from Google and get complete ownership of your own data.%0D%0ACheck out Matomo at https://matomo.org'|url_encode %}
+
+        <div>
+            <a href="mailto:YOUR_FRIEND@EMAIL.ADDRESS?subject={{ mailtoSubject }}&body={{ mailtoBody }}" target="_blank" class="btn premiumDownloadPiwik" rel="noreferrer noopener" id="send-email">
+                <span>Refer Matomo</span>
+            </a>
+        </div>
+
+        {% set tweetParams = {'text': 'Did you know Google is using your data for "own purposes"? This means Google owns your data and uses it to monetise their advertising platforms. If you’re using Google Analytics, stay in control by switching to an ethical alternative like Matomo now!', 'url': 'https://matomo.org/google-owns-your-data?pk_campaign=share&pk_kwd=onpremise'}|url_encode %}
+        {% set facebookParams = {'t': 'Did you know Google is using your data for "own purposes"? This means Google owns your data and uses it to monetise their advertising platforms. If you’re using Google Analytics, stay in control by switching to an ethical alternative like Matomo now!', 'u': 'https://matomo.org/google-owns-your-data?pk_campaign=share&pk_kwd=onpremise'}|url_encode %}
+        {% set linkedParams = { 'mini': 'true', 'title': 'Did you know Google is using your data for "own purposes"?', 'summary': 'This means Google owns your data and uses it to monetise their advertising platforms. If you’re using Google Analytics, stay in control by switching to an ethical alternative like Matomo now!', 'url': 'https://matomo.org/google-owns-your-data?pk_campaign=share&pk_kwd=onpremise', 'source': 'matomo.org'}|url_encode %}
+
+        <div class="hide-on-med-and-down flex items-center">
+            <div>or share us on</div>
+            <div class="flex items-center">
+                <a href="https://twitter.com/intent/tweet?{{ tweetParams }}" class="share-button" target="_blank" rel="noreferrer noopener">
+                    {% include "@CoreHome/_twitterLogo.twig" %}
+                </a>
+                <a href="http://www.facebook.com/sharer.php?{{ facebookParams }}" class="share-button" target="_blank" rel="noreferrer noopener">
+                    {% include "@CoreHome/_facebookLogo.twig" %}
+                </a>
+                <a href="https://www.linkedin.com/shareArticle?{{ linkedParams }}" class="share-button" target="_blank" rel="noreferrer noopener">
+                    {% include "@CoreHome/_linkedinLogo.twig" %}
+                </a>
+                {# <a href="#" class="share-button" target="_blank" rel="noreferrer noopener">
+                    {% include "@CoreHome/_mastodonLogo.twig" %}
+                </a> #}
+            </div>
+        </div>
+
+        <div title="Close" class="icon-close" id="close-banner"></div>
+    </div>
+
+    <div class="hide flex items-center justify-center h-full" id="thanks-text">
+        <div>Thank you for spreading the word and creating a safer web</div>
+
+        <div title="Close" class="icon-close" id="close-thanks></div>
+    </div>
+</div>
